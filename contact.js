@@ -20,4 +20,22 @@ document.addEventListener("DOMContentLoaded", function () {
             statusMessage.textContent = "Please fill out all fields.";
         }
     });
+
+    function adjustLayout() {
+        const container = document.querySelector('.container');
+        if (window.innerWidth <= 768) {
+            container.style.width = "90%";
+            container.style.padding = "15px";
+        } else if (window.innerWidth <= 1024) {
+            container.style.width = "75%";
+            container.style.padding = "20px";
+        } else {
+            container.style.width = "600px";
+            container.style.padding = "20px";
+        }
+    }
+
+    // Adjust layout on load and on resize
+    adjustLayout();
+    window.addEventListener('resize', adjustLayout);
 });
