@@ -1,47 +1,50 @@
 document.addEventListener("DOMContentLoaded", function () {
-    console.log("Index page loaded successfully!");
+    console.log("Portfolio page loaded successfully!");
 
-    // Toggle Mobile Menu
-    const menuToggle = document.querySelector(".menu-toggle");
-    const navMenu = document.querySelector(".nav-menu");
+    // Responsive Navbar Toggle
+    const menuToggle = document.createElement("div");
+    menuToggle.classList.add("menu-toggle");
+    menuToggle.innerHTML = "☰";
+    document.querySelector(".navbar").prepend(menuToggle);
 
-    if (menuToggle) {
-        menuToggle.addEventListener("click", function () {
-            navMenu.classList.toggle("active");
-        });
-    }
-
-    // Smooth Scrolling for Navigation Links
-    const scrollLinks = document.querySelectorAll(".scroll-link");
-    scrollLinks.forEach(link => {
-        link.addEventListener("click", function (event) {
-            event.preventDefault();
-            const targetId = this.getAttribute("href").substring(1);
-            const targetElement = document.getElementById(targetId);
-
-            if (targetElement) {
-                window.scrollTo({
-                    top: targetElement.offsetTop - 60, // Adjust based on fixed navbar height
-                    behavior: "smooth"
-                });
-            }
-        });
+    const navbar = document.querySelector(".navbar");
+    menuToggle.addEventListener("click", function () {
+        navbar.classList.toggle("active");
     });
 
-    // Adjust layout dynamically based on screen size
+    // Adjust layout based on screen size
     function adjustLayout() {
         const homeSection = document.querySelector(".home");
-        const nameElement = document.querySelector(".name");
+        const nameSection = document.querySelector(".name");
+        const imageSection = document.querySelector(".img img");
 
         if (window.innerWidth <= 768) {
             homeSection.style.flexDirection = "column";
-            nameElement.style.fontSize = "20px";
-            nameElement.style.textAlign = "center";
+            homeSection.style.textAlign = "center";
+            nameSection.style.marginLeft = "0";
+            imageSection.style.width = "100%";
+            imageSection.style.height = "auto";
         } else {
             homeSection.style.flexDirection = "row";
-            nameElement.style.fontSize = "25px";
+            homeSection.style.textAlign = "left";
+            nameSection.style.marginLeft = "10%";
+            imageSection.style.width = "750px";
+            imageSection.style.height = "550px";
         }
     }
+
+    // Smooth scrolling for navigation links
+    document.querySelectorAll(".navbar a").forEach(link => {
+        link.addEventListener("click", function (event) {
+            if (this.getAttribute("href").startsWith("#")) {
+                event.preventDefault();
+                const target = document.querySelector(this.getAttribute("href"));
+                if (target) {
+                    target.scrollIntoView({ behavior: "smooth" });
+                }
+            }
+        });
+    });
 
     // Adjust layout on load and resize
     adjustLayout();
