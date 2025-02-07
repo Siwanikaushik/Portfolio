@@ -1,0 +1,78 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+    background: url("resume_background.jpg") no-repeat center center/cover;
+   
+}
+
+/* Container */
+.container {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: auto;
+    background: url('about.jpg') no-repeat center center/cover;
+        position: relative;
+        z-index: 2;
+    
+}
+
+/* Button Styles */
+button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    margin: 10px;
+        position: relative;
+        z-index: 3;
+    
+    
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+
+/* Hide Resume Initially */
+.hidden {
+    display: none;
+}
+.bottom-nav {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    padding: 20px;
+    position: fixed;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+    text-align: center;
+}
+
+.bottom-nav button {
+    background-color: #0b9ddc;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-top: 60%;
+}
+
+.bottom-nav button:hover {
+    background-color: #b4460f;
+}
+
+

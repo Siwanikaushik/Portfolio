@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Me</title>
+    <link rel="stylesheet" href="contact.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Contact Me</h1>
+
+        <!-- Contact Info -->
+        <div class="contact-info">
+            <p><strong>Phone:</strong> <a href="tel:+918595718290">+91 8595718290</a></p>
+            <p><strong>Email:</strong> <a href="mailto:kaushik10siwani@gmail.com">kaushik10siwani@gmail.com</a></p>
+            <p><strong>GitHub:</strong> <a href="https://github.com/Siwanikaushik" target="_blank">Siwani</a></p>
+            <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/siwanikaushik/" target="_blank">Siwani</a></p>
+        </div>
+
+        <!-- Contact Form -->
+        <form id="contactForm">
+            <input type="text" id="name" placeholder="Your Name" required>
+            <input type="email" id="email" placeholder="Your Email" required>
+            <textarea id="message" placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+
+        <p id="statusMessage"></p>
+    </div>
+
+    <!-- Bottom Navigation Buttons -->
+    <div class="bottom-nav">
+        <button onclick="location.href='index.html'">Home</button>
+    </div>
+
+    <script src="contact.js"></script>
+</body>
+</html>

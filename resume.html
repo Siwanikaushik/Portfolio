@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Resume</title>
+    <link rel="stylesheet" href="resume.css">
+</head>
+<body>
+
+    <div class="container">
+        <h2>My Resume</h2>
+
+        <!-- Toggle Button -->
+        <button id="toggleResume">Show Resume</button>
+
+        <!-- Resume PDF Embed -->
+        <div id="resumeContainer" class="hidden">
+            <embed src="Resume.pdf" type="application/pdf" width="100%" height="500px">
+        </div>
+        
+        
+    </div>
+
+    <!-- Bottom Navigation Buttons -->
+    <div class="bottom-nav">
+        <button onclick="location.href='index.html'">Home</button>
+        <button onclick="location.href='project.html'">Projects</button>
+    </div>
+
+    <script src="resume.js" defer></script>
+
+</body>
+</html>
